@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "I8nxhFezvLI+gQYYSt1RX3xohfmDIbhZlAwbrVOzfsEYQPBdxWIFbR26ij0s+172S+RG4qE9gC6kxrPAl3fhzw==",
+  "success": true,
+  "projectFilePath": "C:\\Repos\\z_Learning\\ModelMusicShop\\ModelMusicShop\\ModelMusicShop.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\E0070773\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "C:\\Users\\E0070773\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512"
+  ],
+  "logs": []
+}
