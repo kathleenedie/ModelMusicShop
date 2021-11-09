@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "VeU8ps5wovhaIervqw/rmHEF5BDOXZIWuq2FZO4aNojEHuVlVzgUNtMJu91Q007ZXcLavOrWUeGm14uXQxQKEQ==",
+  "dgSpecHash": "bpCkSvSmLe/+q9YeO6gCgFoVMWXl+NawYtkvH5Iqip0snxReT1oMw0V1dZAL+2QD9xvouCw1VAObS4YWw03mJQ==",
   "success": true,
   "projectFilePath": "C:\\Repos\\z_Learning\\ModelMusicShop\\ModelMusicShop.Tests\\ModelMusicShop.Tests.csproj",
   "expectedPackageFiles": [
@@ -17,7 +17,7 @@
     "C:\\Users\\E0070773\\.nuget\\packages\\microsoft.win32.registry.accesscontrol\\5.0.0\\microsoft.win32.registry.accesscontrol.5.0.0.nupkg.sha512",
     "C:\\Users\\E0070773\\.nuget\\packages\\microsoft.win32.systemevents\\5.0.0\\microsoft.win32.systemevents.5.0.0.nupkg.sha512",
     "C:\\Users\\E0070773\\.nuget\\packages\\microsoft.windows.compatibility\\5.0.0\\microsoft.windows.compatibility.5.0.0.nupkg.sha512",
-    "C:\\Users\\E0070773\\.nuget\\packages\\netstandard.library\\2.0.0\\netstandard.library.2.0.0.nupkg.sha512",
+    "C:\\Users\\E0070773\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512",
     "C:\\Users\\E0070773\\.nuget\\packages\\newtonsoft.json\\9.0.1\\newtonsoft.json.9.0.1.nupkg.sha512",
     "C:\\Users\\E0070773\\.nuget\\packages\\nuget.frameworks\\5.0.0\\nuget.frameworks.5.0.0.nupkg.sha512",
     "C:\\Users\\E0070773\\.nuget\\packages\\nunit\\3.13.2\\nunit.3.13.2.nupkg.sha512",

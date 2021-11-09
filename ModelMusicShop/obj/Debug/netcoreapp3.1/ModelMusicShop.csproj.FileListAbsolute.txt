@@ -1,0 +1,10 @@
+C:\Repos\z_Learning\ModelMusicShop\ModelMusicShop\bin\Debug\netcoreapp3.1\ModelMusicShop.deps.json
+C:\Repos\z_Learning\ModelMusicShop\ModelMusicShop\bin\Debug\netcoreapp3.1\ModelMusicShop.dll
+C:\Repos\z_Learning\ModelMusicShop\ModelMusicShop\bin\Debug\netcoreapp3.1\ModelMusicShop.pdb
+C:\Repos\z_Learning\ModelMusicShop\ModelMusicShop\obj\Debug\netcoreapp3.1\ModelMusicShop.csproj.AssemblyReference.cache
+C:\Repos\z_Learning\ModelMusicShop\ModelMusicShop\obj\Debug\netcoreapp3.1\ModelMusicShop.GeneratedMSBuildEditorConfig.editorconfig
+C:\Repos\z_Learning\ModelMusicShop\ModelMusicShop\obj\Debug\netcoreapp3.1\ModelMusicShop.AssemblyInfoInputs.cache
+C:\Repos\z_Learning\ModelMusicShop\ModelMusicShop\obj\Debug\netcoreapp3.1\ModelMusicShop.AssemblyInfo.cs
+C:\Repos\z_Learning\ModelMusicShop\ModelMusicShop\obj\Debug\netcoreapp3.1\ModelMusicShop.csproj.CoreCompileInputs.cache
+C:\Repos\z_Learning\ModelMusicShop\ModelMusicShop\obj\Debug\netcoreapp3.1\ModelMusicShop.dll
+C:\Repos\z_Learning\ModelMusicShop\ModelMusicShop\obj\Debug\netcoreapp3.1\ModelMusicShop.pdb

@@ -437,7 +437,7 @@
           "System.Threading.AccessControl": "5.0.0"
         }
       },
-      "NETStandard.Library/2.0.0": {
+      "NETStandard.Library/2.0.3": {
         "type": "package",
         "dependencies": {
           "Microsoft.NETCore.Platforms": "1.1.0"
@@ -1771,6 +1771,19 @@
         "runtime": {
           "lib/netstandard1.3/System.Xml.XDocument.dll": {}
         }
+      },
+      "ModelMusicShop/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v3.1",
+        "dependencies": {
+          "NETStandard.Library": "2.0.3"
+        },
+        "compile": {
+          "bin/placeholder/ModelMusicShop.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/ModelMusicShop.dll": {}
+        }
       }
     }
   },
@@ -2654,16 +2667,15 @@
         "version.txt"
       ]
     },
-    "NETStandard.Library/2.0.0": {
-      "sha512": "7jnbRU+L08FXKMxqUflxEXtVymWvNOrS8yHgu9s6EM8Anr6T/wIX4nZ08j/u3Asz+tCufp3YVwFSEvFTPYmBPA==",
+    "NETStandard.Library/2.0.3": {
+      "sha512": "st47PosZSHrjECdjeIzZQbzivYBJFv6P2nv4cj2ypdI204DO+vZ7l5raGMiX4eXMJ53RfOIg+/s4DHVZ54Nu2A==",
       "type": "package",
-      "path": "netstandard.library/2.0.0",
+      "path": "netstandard.library/2.0.3",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "LICENSE.TXT",
         "THIRD-PARTY-NOTICES.TXT",
-        "build/NETStandard.Library.targets",
         "build/netstandard2.0/NETStandard.Library.targets",
         "build/netstandard2.0/ref/Microsoft.Win32.Primitives.dll",
         "build/netstandard2.0/ref/System.AppContext.dll",
@@ -2780,7 +2792,7 @@
         "build/netstandard2.0/ref/netstandard.dll",
         "build/netstandard2.0/ref/netstandard.xml",
         "lib/netstandard1.0/_._",
-        "netstandard.library.2.0.0.nupkg.sha512",
+        "netstandard.library.2.0.3.nupkg.sha512",
         "netstandard.library.nuspec"
       ]
     },
@@ -6729,11 +6741,17 @@
         "system.xml.xdocument.4.0.11.nupkg.sha512",
         "system.xml.xdocument.nuspec"
       ]
+    },
+    "ModelMusicShop/1.0.0": {
+      "type": "project",
+      "path": "../ModelMusicShop/ModelMusicShop.csproj",
+      "msbuildProject": "../ModelMusicShop/ModelMusicShop.csproj"
     }
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v3.1": [
       "Microsoft.NET.Test.Sdk >= 17.0.0",
+      "ModelMusicShop >= 1.0.0",
       "NUnit >= 3.13.2",
       "NUnit3TestAdapter >= 4.1.0",
       "Shouldly >= 4.0.3"
@@ -6766,7 +6784,11 @@
       "frameworks": {
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Repos\\z_Learning\\ModelMusicShop\\ModelMusicShop\\ModelMusicShop.csproj": {
+              "projectPath": "C:\\Repos\\z_Learning\\ModelMusicShop\\ModelMusicShop\\ModelMusicShop.csproj"
+            }
+          }
         }
       },
       "warningProperties": {
