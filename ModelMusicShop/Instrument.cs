@@ -2,21 +2,46 @@
 
 namespace ModelMusicShop
 {
-    abstract class Instrument
+    public abstract class Instrument
     {
-        public string name { get; set; }
-        private InstrumentType type { get; set; }
-        private double buyingPrice { get; set; }
-        private double sellingPrice { get; set; }
-        private string sound { get; set; }
+        private string Name;
+        private InstrumentType InstrumentType;
+        private double BuyingPrice;
+        private double SellingPrice;
+        private string Sound;
 
-        public Instrument(string name, InstrumentType type, double buyingPrice, double sellingPrice, string sound)
+        public Instrument(string name, InstrumentType instrumentType, double buyingPrice, double sellingPrice, string sound)
         {
-            this.name = name;
-            this.type = type;
-            this.buyingPrice = buyingPrice;
-            this.sellingPrice = sellingPrice;
-            this.sound = sound;
+            this.Name = name;
+            this.InstrumentType = instrumentType;
+            this.BuyingPrice = buyingPrice;
+            this.SellingPrice = sellingPrice;
+            this.Sound = sound;
+        }
+
+        public string GetName()
+        {
+            return Name;
+        }
+
+        public InstrumentType GetInstrumentType()
+        {
+            return InstrumentType;
+        }
+
+        public double GetBuyingPrice()
+        {
+            return BuyingPrice;
+        }
+
+        public double GetSellingPrice()
+        {
+            return SellingPrice;
+        }
+
+        public string GetSound()
+        {
+            return Sound;
         }
     }
 }
