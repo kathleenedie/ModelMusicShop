@@ -6,8 +6,8 @@ namespace ModelMusicShop
 {
     public class Guitar : Instrument
     {
-        private int NumStrings { get; set; }
-        private string Brand { get; set; }
+        private int NumStrings;
+        private string Brand;
 
         public Guitar(string name, InstrumentType type, double buyingPrice, double sellingPrice, string sound, int numStrings, string brand): base(name, type, buyingPrice, sellingPrice, sound)
         {
