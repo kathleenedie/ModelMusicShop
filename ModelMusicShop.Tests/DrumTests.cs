@@ -41,14 +41,34 @@ namespace ModelMusicShop.Tests
             drum1.GetSellingPrice().ShouldBe(566.00);
         }
 
+        [Test]
         public void DrumHasSound()
         {
             drum1.GetSound().ShouldBe("paat paat");
         }
 
+        [Test]
         public void DrumHasMaterial()
         {
             drum1.GetMaterial().ShouldBe("ash");
+        }
+
+        [Test]
+        public void DrumCanPlay()
+        {
+            drum1.Play().ShouldBe("When I play you hear paat paat");
+        }
+
+        [Test]
+        public void DrumCanCalculateGrossProfit()
+        {
+            drum1.CalculateGrossProfit().ShouldBe(353.75);
+        }
+
+        [Test]
+        public void DrumCanCalculateMarkup()
+        {
+            drum1.CalculateMarkup().ShouldBe(167);
         }
     }
 }

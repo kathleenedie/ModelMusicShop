@@ -1,34 +1,27 @@
 ﻿using System;
-using System.Reflection.Metadata.Ecma335;
+using System.Collections.Generic;
+using System.Text;
 
 namespace ModelMusicShop
 {
-    public abstract class Instrument : IPlay, ISell
-
+    public abstract class Item : ISell
     {
         private string Name;
-        private InstrumentType InstrumentType;
         private double BuyingPrice;
         private double SellingPrice;
-        private string Sound;
+        private ItemCategory Category;
 
-        public Instrument(string name, InstrumentType instrumentType, double buyingPrice, double sellingPrice, string sound)
+        public Item(string name, double buyingPrice, double sellingPrice, ItemCategory category)
         {
             this.Name = name;
-            this.InstrumentType = instrumentType;
             this.BuyingPrice = buyingPrice;
             this.SellingPrice = sellingPrice;
-            this.Sound = sound;
+            this.Category = category;
         }
 
         public string GetName()
         {
             return Name;
-        }
-
-        public InstrumentType GetInstrumentType()
-        {
-            return InstrumentType;
         }
 
         public double GetBuyingPrice()
@@ -41,17 +34,11 @@ namespace ModelMusicShop
             return SellingPrice;
         }
 
-        public string GetSound()
+        public ItemCategory GetCategory()
         {
-            return Sound;
+            return Category;
         }
 
-        public string Play()
-        {
-            return $"When I play you hear {GetSound()}";
-        }
-
-        //Should I use midpoint rounding below?
         public double CalculateGrossProfit()
         {
             return Math.Round((GetSellingPrice() - GetBuyingPrice()), 2);
@@ -59,7 +46,7 @@ namespace ModelMusicShop
 
         public double CalculateMarkup()
         {
-            return Math.Round((100*(CalculateGrossProfit()/GetBuyingPrice())), 0);
+            return Math.Round((100 * (CalculateGrossProfit() / GetBuyingPrice())), 0);
         }
     }
 }
