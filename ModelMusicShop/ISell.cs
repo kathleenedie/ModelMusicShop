@@ -4,7 +4,7 @@ using System.Text;
 
 namespace ModelMusicShop
 {
-    interface ISell
+    public interface ISell
     {
         public double CalculateGrossProfit();
 
