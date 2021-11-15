@@ -70,5 +70,10 @@ namespace ModelMusicShop
             AddSoldItem(iSell);
             AddCashToTill(iSell);
         }
+
+        public double StockSaleProfitValue()
+        {
+            return Math.Round((Stock.Sum(iSell => iSell.CalculateGrossProfit())/100*(100-SaleDiscount)), 2);
+        }
     }
 }

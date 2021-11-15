@@ -164,5 +164,18 @@ namespace ModelMusicShop.Tests
 
             shop1.Sold.Count.ShouldBe(1);
         }
+
+        [Test]
+
+        public void StockTotalProfitAfterSaleDiscount()
+        {
+            var shop1 = new Shoap("Jay's Jazzy Jukebox", 10);
+            shop1.AddStockItem(guitar2);
+            shop1.AddStockItem(guitar3);
+            shop1.AddStockItem(drum2);
+            shop1.AddStockItem(beater2);
+
+            shop1.StockSaleProfitValue().ShouldBe(132.03);
+        }
     }
 }
