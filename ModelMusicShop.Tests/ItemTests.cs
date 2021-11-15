@@ -14,61 +14,61 @@ namespace ModelMusicShop.Tests
         [SetUp]
         public void SetUp()
         {
-            beater1 = new Beater("Wee Hands Mallets", 2.45, 5.50, ItemCategory.Accessories, "child", true);
-            cleaner1 = new Cleaner("Trumpet valve stick", 4.20, 8.99, ItemCategory.Maintenance, InstrumentType.Brass,
+            beater1 = new Beater("Wee Hands Mallets", 2.45, 5.50, "child", true);
+            cleaner1 = new Cleaner("Trumpet valve stick", 4.20, 8.99,  InstrumentType.Brass,
                 false);
         }
 
         [Test]
         public void ItemHasName()
         {
-            beater1.GetName().ShouldBe("Wee Hands Mallets");
-            cleaner1.GetName().ShouldBe("Trumpet valve stick");
+            beater1.Name.ShouldBe("Wee Hands Mallets");
+            cleaner1.Name.ShouldBe("Trumpet valve stick");
         }
 
         [Test]
         public void ItemHasBuyingPrice()
         {
-            beater1.GetBuyingPrice().ShouldBe(2.45);
-            cleaner1.GetBuyingPrice().ShouldBe(4.20);
+            beater1.BuyingPrice.ShouldBe(2.45);
+            cleaner1.BuyingPrice.ShouldBe(4.20);
         }
 
         [Test]
         public void ItemHasSellingPrice()
         {
-            beater1.GetSellingPrice().ShouldBe(5.50);
-            cleaner1.GetSellingPrice().ShouldBe(8.99);
+            beater1.SellingPrice.ShouldBe(5.50);
+            cleaner1.SellingPrice.ShouldBe(8.99);
         }
 
         [Test]
         public void ItemHasItemCategory()
         {
-            beater1.GetCategory().ShouldBe(ItemCategory.Accessories);
-            cleaner1.GetCategory().ShouldBe(ItemCategory.Maintenance);
+            beater1.Category.ShouldBe(ItemCategory.Accessories);
+            cleaner1.Category.ShouldBe(ItemCategory.Maintenance);
         }
 
         [Test]
         public void BeaterHasAgeRange()
         {
-            beater1.GetAgeRange().ShouldBe("child");
+            beater1.AgeRange.ShouldBe("child");
         }
 
         [Test]
         public void BeaterHasPairBool()
         {
-            beater1.GetPair().ShouldBe(true);
+            beater1.Pair.ShouldBe(true);
         }
 
         [Test]
         public void CleanerHasInstrumentFor()
         {
-            cleaner1.GetInstrumentFor().ShouldBe(InstrumentType.Brass);
+            cleaner1.InstrumentFor.ShouldBe(InstrumentType.Brass);
         }
 
         [Test]
         public void CleanerHasChemicalBool()
         {
-            cleaner1.GetChemicalCleaner().ShouldBe(false);
+            cleaner1.ChemicalCleaner.ShouldBe(false);
         }
 
         [Test]

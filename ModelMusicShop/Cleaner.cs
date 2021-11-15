@@ -6,24 +6,14 @@ namespace ModelMusicShop
 {
     public class Cleaner : Item
     {
-        private InstrumentType InstrumentFor;
-        private bool ChemicalCleaner;
+        public InstrumentType InstrumentFor { get; set; }
+        public bool ChemicalCleaner { get; set; }
 
-        public Cleaner(string name, double buyingPrice, double sellingPrice, ItemCategory category,
-            InstrumentType instrumentFor, bool chemicalCleaner) : base(name, buyingPrice, sellingPrice, category)
+        public Cleaner(string name, double buyingPrice, double sellingPrice,
+            InstrumentType instrumentFor, bool chemicalCleaner) : base(name, buyingPrice, sellingPrice, ItemCategory.Maintenance)
         {
             this.InstrumentFor = instrumentFor;
             this.ChemicalCleaner = chemicalCleaner;
-        }
-
-        public InstrumentType GetInstrumentFor()
-        {
-            return InstrumentFor;
-        }
-
-        public bool GetChemicalCleaner()
-        {
-            return ChemicalCleaner;
         }
     }
 }

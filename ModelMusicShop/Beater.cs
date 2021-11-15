@@ -7,23 +7,13 @@ namespace ModelMusicShop
 {
     public class Beater : Item
     {
-        private string AgeRange;
-        private bool Pair;
+        public string AgeRange { get; set; }
+        public bool Pair { get; set; }
 
-        public Beater(string name, double buyingPrice, double sellingPrice, ItemCategory category, string ageRange, bool pair): base(name, buyingPrice, sellingPrice, category)
+        public Beater(string name, double buyingPrice, double sellingPrice, string ageRange, bool pair): base(name, buyingPrice, sellingPrice, ItemCategory.Accessories)
         {
             this.AgeRange = ageRange;
             this.Pair = pair;
-        }
-
-        public string GetAgeRange()
-        {
-            return AgeRange;
-        }
-
-        public bool GetPair()
-        {
-            return Pair;
         }
     }
 }

@@ -8,8 +8,8 @@ namespace ModelMusicShop
     {
         private string Material;
 
-        public Drum (string name, InstrumentType instrumentType, double buyingPrice, double sellingPrice, string sound,
-            string material): base(name, instrumentType, buyingPrice, sellingPrice, sound)
+        public Drum (string name, double buyingPrice, double sellingPrice, string sound,
+            string material): base(name, InstrumentType.Percussion, buyingPrice, sellingPrice, sound)
         {
             this.Material = material;
         }

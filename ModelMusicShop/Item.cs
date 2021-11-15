@@ -6,10 +6,10 @@ namespace ModelMusicShop
 {
     public abstract class Item : ISell
     {
-        private string Name;
-        private double BuyingPrice;
-        private double SellingPrice;
-        private ItemCategory Category;
+        public string Name { get; set; }
+        public double BuyingPrice { get; set; }
+        public double SellingPrice { get; set; }
+        public ItemCategory Category { get; set; }
 
         public Item(string name, double buyingPrice, double sellingPrice, ItemCategory category)
         {
@@ -19,34 +19,14 @@ namespace ModelMusicShop
             this.Category = category;
         }
 
-        public string GetName()
-        {
-            return Name;
-        }
-
-        public double GetBuyingPrice()
-        {
-            return BuyingPrice;
-        }
-
-        public double GetSellingPrice()
-        {
-            return SellingPrice;
-        }
-
-        public ItemCategory GetCategory()
-        {
-            return Category;
-        }
-
         public double CalculateGrossProfit()
         {
-            return Math.Round((GetSellingPrice() - GetBuyingPrice()), 2);
+            return Math.Round((SellingPrice - BuyingPrice), 2);
         }
 
         public double CalculateMarkup()
         {
-            return Math.Round((100 * (CalculateGrossProfit() / GetBuyingPrice())), 0);
+            return Math.Round((100 * (CalculateGrossProfit() / BuyingPrice)), 0);
         }
     }
 }

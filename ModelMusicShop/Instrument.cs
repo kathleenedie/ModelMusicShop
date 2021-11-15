@@ -6,11 +6,11 @@ namespace ModelMusicShop
     public abstract class Instrument : IPlay, ISell
 
     {
-        private string Name;
-        private InstrumentType InstrumentType;
-        private double BuyingPrice;
-        private double SellingPrice;
-        private string Sound;
+        public string Name { get; set; }
+        public InstrumentType InstrumentType { get; set; }
+        public double BuyingPrice { get; set; }
+        public double SellingPrice { get; set; }
+        public string Sound { get; set; }
 
         public Instrument(string name, InstrumentType instrumentType, double buyingPrice, double sellingPrice, string sound)
         {
@@ -21,45 +21,21 @@ namespace ModelMusicShop
             this.Sound = sound;
         }
 
-        public string GetName()
-        {
-            return Name;
-        }
-
-        public InstrumentType GetInstrumentType()
-        {
-            return InstrumentType;
-        }
-
-        public double GetBuyingPrice()
-        {
-            return BuyingPrice;
-        }
-
-        public double GetSellingPrice()
-        {
-            return SellingPrice;
-        }
-
-        public string GetSound()
-        {
-            return Sound;
-        }
 
         public string Play()
         {
-            return $"When I play you hear {GetSound()}";
+            return $"When I play you hear {Sound}";
         }
 
         //Should I use midpoint rounding below?
         public double CalculateGrossProfit()
         {
-            return Math.Round((GetSellingPrice() - GetBuyingPrice()), 2);
+            return Math.Round((SellingPrice - BuyingPrice), 2);
         }
 
         public double CalculateMarkup()
         {
-            return Math.Round((100*(CalculateGrossProfit()/GetBuyingPrice())), 0);
+            return Math.Round((100*(CalculateGrossProfit()/BuyingPrice)), 0);
         }
     }
 }
