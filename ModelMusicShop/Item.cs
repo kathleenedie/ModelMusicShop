@@ -28,5 +28,10 @@ namespace ModelMusicShop
         {
             return Math.Round((100 * (CalculateGrossProfit() / BuyingPrice)), 0);
         }
+
+        public double TicketPrice()
+        {
+            return Math.Round(SellingPrice, 2);
+        }
     }
 }

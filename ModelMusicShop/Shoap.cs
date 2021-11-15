@@ -4,44 +4,30 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Security.Cryptography;
 using System.Text;
+using System.Transactions;
 
 namespace ModelMusicShop
 {
     public class Shoap
     {
-        private string Name;
-        private List<ISell> Stock;
-        private List<ISell> Sold;
-        private double Float;
-        private double Till;
+        public string Name { get; set; }
+        public List<ISell> Stock { get; set; }
+        public List<ISell> Sold { get; set; }
+        public double Float { get; set; }
+        public double Till { get; set; }
+        public int SaleDiscount { get; set; }
 
-        public Shoap(string name)
+        public Shoap(string name, int saleDiscount)
         {
             this.Name = name;
             this.Stock = new List<ISell>();
+            this.Sold = new List<ISell>();
             this.Float = 100.00;
             this.Till = 0 + Float;
+            this.SaleDiscount = saleDiscount;
         }
 
-        public string GetName()
-        {
-            return Name;
-        }
-
-        public List<ISell> GetStock()
-        {
-            return Stock;
-        }
-
-        public double GetFloat()
-        {
-            return Float;
-        }
-
-        public double GetTill()
-        {
-            return Till;
-        }
+        
 
         public int StockCount()
         {
@@ -50,7 +36,7 @@ namespace ModelMusicShop
 
         public int StockCountOfInstruments()
         { 
-            return GetStock().OfType<Instrument>().Count();
+            return Stock.OfType<Instrument>().Count();
         }
 
         public void AddStockItem(ISell iSell)
@@ -66,6 +52,23 @@ namespace ModelMusicShop
         public double CalculateStockProfitTotal()
         {
             return Math.Round((Stock.Sum(iSell => iSell.CalculateGrossProfit())), 2) ;
+        }
+
+        public void AddCashToTill(ISell iSell)
+        {
+            Till = Till + iSell.TicketPrice();
+        }
+
+        public void AddSoldItem(ISell iSell)
+        {
+            Sold.Add(iSell);
+        }
+
+        public void SellItem(ISell iSell)
+        {
+            RemoveStockItem(iSell);
+            AddSoldItem(iSell);
+            AddCashToTill(iSell);
         }
     }
 }

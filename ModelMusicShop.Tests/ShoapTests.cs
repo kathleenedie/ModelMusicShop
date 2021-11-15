@@ -8,13 +8,13 @@ namespace ModelMusicShop.Tests
 {
     public class ShoapTests
     {
-        private Shoap shop1;
-        private Guitar guitar2;
-        private Guitar guitar3;
-        private Drum drum2;
-        private Beater beater2;
-        private Cleaner cleaner2;
-        private Cleaner cleaner3;
+        public Shoap shop1;
+        public Guitar guitar2;
+        public Guitar guitar3;
+        public Drum drum2;
+        public Beater beater2;
+        public Cleaner cleaner2;
+        public Cleaner cleaner3;
 
         [SetUp]
         public void Setup()
@@ -37,35 +37,35 @@ namespace ModelMusicShop.Tests
         [Test]
         public void ShopHasName()
         {
-            var shop1 = new Shoap("Jay's Jazzy Jukebox");
-            shop1.GetName().ShouldBe("Jay's Jazzy Jukebox");
+            var shop1 = new Shoap("Jay's Jazzy Jukebox", 0);
+            shop1.Name.ShouldBe("Jay's Jazzy Jukebox");
         }
 
         [Test]
         public void ShopHasInitialEmptyStock()
         {
-            var shop1 = new Shoap("Jay's Jazzy Jukebox");
+            var shop1 = new Shoap("Jay's Jazzy Jukebox", 0);
             shop1.StockCount().ShouldBe(0);
         }
 
         [Test]
         public void ShopHasCorrectFloat()
         {
-            var shop1 = new Shoap("Jay's Jazzy Jukebox");
-            shop1.GetFloat().ShouldBe(100.00);
+            var shop1 = new Shoap("Jay's Jazzy Jukebox", 0);
+            shop1.Float.ShouldBe(100.00);
         }
 
         [Test]
         public void ShopHasInitialTillTotalOfFloat()
         {
-            var shop1 = new Shoap("Jay's Jazzy Jukebox");
-            shop1.GetFloat().ShouldBe(100.00);
+            var shop1 = new Shoap("Jay's Jazzy Jukebox", 0);
+            shop1.Till.ShouldBe(100.00);
         }
 
         [Test]
         public void ShopCanCountInstruments()
         {
-            var shop1 = new Shoap("Jay's Jazzy Jukebox");
+            var shop1 = new Shoap("Jay's Jazzy Jukebox", 0);
             shop1.AddStockItem(guitar2);
             shop1.AddStockItem(guitar3);
             shop1.AddStockItem(drum2);
@@ -77,7 +77,7 @@ namespace ModelMusicShop.Tests
         [Test]
         public void ShopCanAddStock()
         {
-            var shop1 = new Shoap("Jay's Jazzy Jukebox");
+            var shop1 = new Shoap("Jay's Jazzy Jukebox", 0);
             shop1.AddStockItem(guitar2);
             shop1.AddStockItem(guitar3);
             shop1.AddStockItem(drum2);
@@ -89,7 +89,7 @@ namespace ModelMusicShop.Tests
         [Test]
         public void ShopCanRemoveStock()
         {
-            var shop1 = new Shoap("Jay's Jazzy Jukebox");
+            var shop1 = new Shoap("Jay's Jazzy Jukebox", 0);
             shop1.AddStockItem(guitar2);
             shop1.AddStockItem(guitar3);
             shop1.AddStockItem(drum2);
@@ -102,7 +102,7 @@ namespace ModelMusicShop.Tests
         [Test]
         public void ShopCanRemoveSpecificStockItem()
         {
-            var shop1 = new Shoap("Jay's Jazzy Jukebox");
+            var shop1 = new Shoap("Jay's Jazzy Jukebox", 0);
             shop1.AddStockItem(guitar2);
             shop1.AddStockItem(guitar3);
             shop1.AddStockItem(drum2);
@@ -115,7 +115,7 @@ namespace ModelMusicShop.Tests
         [Test]
         public void ShopCanCalculateStockProfitTotal()
         {
-            var shop1 = new Shoap("Jay's Jazzy Jukebox");
+            var shop1 = new Shoap("Jay's Jazzy Jukebox", 0);
             shop1.AddStockItem(guitar2);
             shop1.AddStockItem(guitar3);
             shop1.AddStockItem(drum2);
@@ -124,6 +124,45 @@ namespace ModelMusicShop.Tests
             shop1.AddStockItem(cleaner3);
 
             shop1.CalculateStockProfitTotal().ShouldBe(154.61);
+        }
+
+        [Test]
+        public void ShopTillIncreasesAfterSale()
+        {
+            var shop1 = new Shoap("Jay's Jazzy Jukebox", 0);
+            shop1.AddStockItem(guitar2);
+            shop1.AddStockItem(guitar3);
+            shop1.AddStockItem(drum2);
+            shop1.AddStockItem(beater2);
+            shop1.SellItem(guitar3);
+
+            shop1.Till.ShouldBe(219.00);
+        }
+
+        [Test]
+        public void ShopStockListDecreasesAfterSale()
+        {
+            var shop1 = new Shoap("Jay's Jazzy Jukebox", 0);
+            shop1.AddStockItem(guitar2);
+            shop1.AddStockItem(guitar3);
+            shop1.AddStockItem(drum2);
+            shop1.AddStockItem(beater2);
+            shop1.SellItem(guitar3);
+
+            shop1.StockCount().ShouldBe(3);
+        }
+
+        [Test]
+        public void ShopSoldListIncreasesAfterSale()
+        {
+            var shop1 = new Shoap("Jay's Jazzy Jukebox", 0);
+            shop1.AddStockItem(guitar2);
+            shop1.AddStockItem(guitar3);
+            shop1.AddStockItem(drum2);
+            shop1.AddStockItem(beater2);
+            shop1.SellItem(guitar3);
+
+            shop1.Sold.Count.ShouldBe(1);
         }
     }
 }

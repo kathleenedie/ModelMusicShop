@@ -9,5 +9,7 @@ namespace ModelMusicShop
         public double CalculateGrossProfit();
 
         public double CalculateMarkup();
+
+        public double TicketPrice();
     }
 }
